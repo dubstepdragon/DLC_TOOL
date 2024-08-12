@@ -1,6 +1,6 @@
 # DLC_TOOL
 
-This is a stripped down expandable version of my core tools that I use for the AwboiMerger for ShadeTheBat's [AwtterMerger](https://github.com/dubstepdragon/AwtterMerger) tool.
+This is a stripped down version of my core tools that I use for the AwboiMerger for ShadeTheBat's [AwtterMerger](https://github.com/dubstepdragon/AwtterMerger) tool.
 
 The code base this is built on is from an asset https://booth.pm/en/items/2207020
 
