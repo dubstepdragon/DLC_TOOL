@@ -2,7 +2,7 @@
 
 This is a stripped down version of my personal Avatar DLC tools that I use for the AwboiMerger for ShadeTheBat's [AwtterMerger](https://github.com/dubstepdragon/AwtterMerger) tool.
 
-The code base this is built on is from an asset https://booth.pm/en/items/2207020
+Some of the code based in this is built from an asset https://booth.pm/en/items/2207020
 
 These tools are for use building quick dlc for VRchat and are a "DESTRUCTIVE" merge, meaning your avatar will be modified when you hit merge and not during the build process. 
 
