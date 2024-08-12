@@ -2,24 +2,23 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using DLC_TOOLS.Tools;
 using UnityEditor;
 using UnityEngine;
 using VRC.SDK3.Avatars.Components;
 using VRC.SDK3.Avatars.ScriptableObjects;
-using XRDUB_VRC_TOOLS.Scripts;
 using UnityEditor.Animations;
-using XRDUB.AMP.Core;
 
-namespace XRDUB_VRC_TOOLS.Editor
+namespace DLC_TOOLS.Editor
 {
-    [CustomEditor(typeof(DLC), true)]
+    [CustomEditor(typeof(DUB_DLC), true)]
     public class DLC_INSPECTOR : UnityEditor.Editor
     {
         private int selectedAvatar = 0;
 
         private VRCAvatarDescriptor[] avatarsInScene;
 
-        public static string dlcMenuLocation = "Assets/ironicsoap/DLC/";
+        public static string dlcMenuLocation = "Assets/DLC/";
 
         public void OnEnable()
         {
@@ -29,7 +28,7 @@ namespace XRDUB_VRC_TOOLS.Editor
 
         public override void OnInspectorGUI()
         {
-            var dlc = target as DLC;
+            var dlc = target as DUB_DLC;
 
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField("Tool Made by DubstepDragon if you have any questions click the button!");
@@ -70,7 +69,7 @@ namespace XRDUB_VRC_TOOLS.Editor
             EditorGUILayout.EndHorizontal();
         }
 
-        private void HandleAnimatorMenuParameters(DLC dlc)
+        private void HandleAnimatorMenuParameters(DUB_DLC dlc)
         {
             AnimatorController AvatarAnimator = avatarsInScene[selectedAvatar]
                 .baseAnimationLayers.FirstOrDefault(i => i.type == VRCAvatarDescriptor.AnimLayerType.FX)
@@ -79,18 +78,18 @@ namespace XRDUB_VRC_TOOLS.Editor
             VRCExpressionParameters AvatarParameters = avatarsInScene[selectedAvatar].expressionParameters;
                 
             //Merge Animator, menu and parameters
-            XRDUB.AMP.Core.XRDUB.HandleAnimatorComp(dlc.dlcFX, AvatarAnimator);
-            XRDUB.AMP.Core.XRDUB.HandleMenu(dlc.DLC_Menu, AvatarMenu, "DLC", dlcMenuLocation);
-            XRDUB.AMP.Core.XRDUB.HandleParameters(dlc.DLC_Parameters, AvatarParameters);
+            XRDUB.Core.DUB_TOOLS.HandleAnimatorComp(dlc.dlcFX, AvatarAnimator);
+            XRDUB.Core.DUB_TOOLS.HandleMenu(dlc.DLC_Menu, AvatarMenu, "DLC", dlcMenuLocation);
+            XRDUB.Core.DUB_TOOLS.HandleParameters(dlc.DLC_Parameters, AvatarParameters);
         }
 
-        private void MoveGameObjects(DLC dlc)
+        private void MoveGameObjects(DUB_DLC dlc)
         {
             //Get Armature and move Game Objects
             List<GameObject> ArmatureGOs = new List<GameObject>();
 
             Transform Armature = avatarsInScene[selectedAvatar].gameObject.transform.Find("Armature");
-            XRDUB_UTILS.TraverseHierarchy(Armature, ArmatureGOs);
+            XRDUB.Core.DUB_UTILS.TraverseHierarchy(Armature, ArmatureGOs);
 
             foreach (var GOToBone in dlc.gameObjectsToBones)
             {

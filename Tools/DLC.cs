@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using DLC_TOOLS.Tools;
 using UnityEditor.Animations;
 using UnityEngine;
 using VRC.SDK3.Avatars.ScriptableObjects;
 
-namespace XRDUB_VRC_TOOLS.Scripts
+namespace DLC_TOOLS.Tools
 {
-    public class DLC : MonoBehaviour
+    public class DUB_DLC : MonoBehaviour
     {
         public AnimatorController dlcFX;
 

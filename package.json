@@ -1,7 +1,7 @@
 {
     "name": "dev.dubby.dlc-tool",
     "displayName": "DLC Tool",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "DLC Creation and Joining tool for Unity",
     "author": {
       "name": "Dubby",
