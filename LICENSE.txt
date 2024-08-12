@@ -1,0 +1,8 @@
+This tool was developed by DubstepDragon for use with IronicSoap's Models
+
+It's a slimmed down open sourced toolset from this asset  https://booth.pm/en/items/2207020 
+
+that I have since reworked on my own. 
+
+the AwboiMerger and the AwboiUnmerger are a fully featured toolset designed for ShadetheBat's Awtter and that code is not associated with this tool. 
+
