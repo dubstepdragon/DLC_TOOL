@@ -1,0 +1,14 @@
+{
+    "name": "DLC_TOOLS",
+    "references": [
+        "DLC_TOOLS.Editor"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "noEngineReferences": false
+}
