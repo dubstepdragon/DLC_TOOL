@@ -11,3 +11,4 @@ If you want a more fully featured, more compatible tool please go check out [VRC
 
 # How TO
 
+[DLC Creation Tutorial](https://youtu.be/83tykgorG20)
